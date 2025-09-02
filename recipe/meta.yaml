@@ -1,5 +1,5 @@
 {% set name = "pylibjpeg" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pylibjpeg-{{ version }}.tar.gz
-  sha256: 3beae5cf829f83bf0c1e5640c3b655bc0f406b8be302215e72f8d31a4185a947
+  sha256: 2decda24982394533f16f1c6a17a6242f3391b95f69fac56c6a598a6b1362105
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
